@@ -14,6 +14,7 @@
 
 - [ClockIn](#clockin)
   - [🚀 Descripción del Proyecto](#-descripción-del-proyecto)
+  - [📌 Tabla de Contenidos](#-tabla-de-contenidos)
   - [📦 Estructura del Proyecto](#-estructura-del-proyecto)
   - [🛠️ Requisitos Previos](#️-requisitos-previos)
   - [🚀 Ejecución del Proyecto](#-ejecución-del-proyecto)
@@ -21,8 +22,10 @@
     - [🖥️ Frontend](#️-frontend)
     - [🗄️ Base de Datos](#️-base-de-datos)
   - [🐳 Despliegue en Desarrollo con Docker Compose](#-despliegue-en-desarrollo-con-docker-compose)
+  - [Comandos utiles](#comandos-utiles)
   - [👥 Autores y Colaboradores](#-autores-y-colaboradores)
   - [📜 Licencia](#-licencia)
+
 ---
 
 ## 📦 Estructura del Proyecto
@@ -34,7 +37,6 @@ ClockIn está organizado en las siguientes partes:
 - **Base de Datos**: Utiliza **MongoDB** para el almacenamiento de los datos de usuarios y registros de asistencia.
 - **Despliegue**: Gestionado mediante **Docker** para simplificar el entorno de desarrollo y despliegue.
 
-
 ## 🛠️ Requisitos Previos
 
 Antes de comenzar, asegúrate de tener las siguientes herramientas instaladas en tu máquina:
@@ -42,8 +44,8 @@ Antes de comenzar, asegúrate de tener las siguientes herramientas instaladas en
 - [Node.js](https://nodejs.org/)
 - [Docker](https://www.docker.com/)
 - [MongoDB](https://www.mongodb.com/)
----
 
+---
 
 ## 🚀 Ejecución del Proyecto
 
@@ -61,6 +63,7 @@ npm start
 ```
 
 ### 🖥️ Frontend
+
 ```bash
 Copiar código
 # Navega a la carpeta del frontend
@@ -82,10 +85,24 @@ ng serve
 Para levantar todo el entorno (API, frontend y base de datos) usando Docker:
 
 Desde la raíz del proyecto
+
 ```bash
 docker-compose up --build
 ```
+
 Esto levantará todos los servicios necesarios y expondrá la API y el frontend en los puertos configurados en el archivo docker-compose.yml.
+
+---
+
+## Comandos utiles
+
+Para implementar eslint y prettier se ha seguido la guia de [aqui](https://medium.com/@namtovar/configurando-eslint-y-prettier-para-un-proyecto-react-vite-ts-46cef56e5ad6) y [aqui](https://gist.github.com/ryokryok/2ab9be9f68091844503777d71c897315)
+
+Para comprobar si existen conflictos entre prettier y eslint:
+
+```bash
+npx eslint-config-prettier ./src/main.tsx
+```
 
 ---
 
@@ -93,7 +110,7 @@ Esto levantará todos los servicios necesarios y expondrá la API y el frontend 
 
 - **Mykhaylo Lelgant** - [GitHub](https://github.com/Mykle23)
 
-- ---
+---
 
 ## 📜 Licencia
 
