@@ -53,7 +53,7 @@ Antes de comenzar, asegúrate de tener las siguientes herramientas instaladas en
 
 ```bash
 # Navega a la carpeta de la API
-cd api
+cd clockIn.backend
 
 # Instala las dependencias
 npm install
