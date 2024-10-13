@@ -35,6 +35,12 @@ export default defineFlatConfig([
             'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
             ...prettier.configs.recommended.rules,
             ...react.configs.flat['jsx-runtime'].rules,
+            prettier: [
+                'error',
+                {
+                    endOfLine: 'auto',
+                },
+            ],
         },
         settings: {
             react: {
