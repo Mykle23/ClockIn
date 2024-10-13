@@ -7,11 +7,13 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 import prettier from 'eslint-plugin-prettier';
 import { defineFlatConfig } from 'eslint-define-config';
 import react from 'eslint-plugin-react';
+import pluginQuery from '@tanstack/eslint-plugin-query';
 
 export default defineFlatConfig([
     {
         ignores: ['./dist'],
     },
+    ...pluginQuery.configs['flat/recommended'],
     {
         files: ['**/*.{ts,tsx}'],
         languageOptions: {
@@ -35,7 +37,7 @@ export default defineFlatConfig([
             'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
             ...prettier.configs.recommended.rules,
             ...react.configs.flat['jsx-runtime'].rules,
-            prettier: [
+            'prettier/prettier': [
                 'error',
                 {
                     endOfLine: 'auto',
