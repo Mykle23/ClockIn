@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Frontend",
+			"type": "npm",
+			"script": "dev",
+			"path": "clockIn.frontend",
+			"options": {"cwd": "${workspaceFolder}/clockIn.backend"}
+		},
+		{
+			"label": "Backend",
+			"type": "npm",
+			"script": "dev",
+			"path": "clockIn.backend",
+			"options": {"cwd": "${workspaceFolder}/clockIn.frontend"}
+
+		},
+		{
+			"label": "Run backend and frontend",
+			"dependsOn": [ "Frontend","Backend"],
+			"group":{
+				"isDefault": true,
+				"kind": "build"
+			} 			
+		}
+
+	]
+}
