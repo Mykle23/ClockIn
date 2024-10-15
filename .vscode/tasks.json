@@ -6,19 +6,19 @@
 			"type": "npm",
 			"script": "dev",
 			"path": "clockIn.frontend",
-			"options": {"cwd": "${workspaceFolder}/clockIn.backend"}
+			"options": {"cwd": "${workspaceFolder}/clockIn.frontend"}
 		},
 		{
 			"label": "Backend",
 			"type": "npm",
 			"script": "dev",
 			"path": "clockIn.backend",
-			"options": {"cwd": "${workspaceFolder}/clockIn.frontend"}
+			"options": {"cwd": "${workspaceFolder}/clockIn.backend"}
 
 		},
 		{
 			"label": "Run backend and frontend",
-			"dependsOn": [ "Frontend","Backend"],
+			"dependsOn": ["Frontend","Backend"],
 			"group":{
 				"isDefault": true,
 				"kind": "build"
