@@ -7,6 +7,7 @@ const status = require("http-status");
 const httpStatus = status.status;
 const ApiError = require("./utils/ApiError");
 const routes = require("./routes/v1/routes.js");
+const { errorConverter, errorHandler } = require("./middlewares/error.js");
 const app = express();
 
 // set security HTTP headers
@@ -35,9 +36,9 @@ app.use((req, res, next) => {
 });
 
 // convert error to ApiError, if needed
-// app.use(errorConverter);
+app.use(errorConverter);
 
 //handle error
-// app.use(errorHandler);
+app.use(errorHandler);
 
 module.exports = app;
