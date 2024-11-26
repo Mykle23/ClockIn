@@ -1,0 +1,30 @@
+services:
+  clockin.backend:
+    build: .
+    image: node-app
+    environment:
+      - MONGODB_URL=mongodb://mongodb:27017/clockin
+    ports:
+      - "3000:3000"
+    depends_on:
+      - clockin.mongodb
+    volumes:
+      - .:/usr/src/node-app
+    networks:
+      - node-network
+
+  clockin.mongodb:
+    image: mongo:8.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - dbdata:/data/db
+    networks:
+      - node-network
+
+volumes:
+  dbdata:
+
+networks:
+  node-network:
+    driver: bridge

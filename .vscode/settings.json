@@ -1,0 +1,19 @@
+{
+  "editor.formatOnSave": true, // Habilitar el formateo al guardar
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit" // Usar ESLint para corregir errores al guardar
+  },
+  // "prettier.requireConfig": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Usar Prettier como el formateador por defecto para JS
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Usar Prettier como el formateador por defecto para TS
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Usar Prettier para React
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Usar Prettier para TypeScript con React
+  }
+}
