@@ -1,18 +1,18 @@
-const express = require("express");
-const clientRoute = require("./client.route.js");
+const express = require('express');
+const clientRoute = require('./client.route.js');
 
 const router = express.Router();
 
 const defaultRoutes = [
   {
-    path: "/clients",
+    path: '/clients',
     route: clientRoute,
   },
 ];
 
 const devRoutes = [
   {
-    path: "/docs",
+    path: '/docs',
     // route: docsRoute
   },
 ];

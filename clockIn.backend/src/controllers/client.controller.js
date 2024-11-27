@@ -1,4 +1,4 @@
-const { status } = require("http-status");
+const { status } = require('http-status');
 
 const createClient = (req, res) => {
   res.status(status[200]);
