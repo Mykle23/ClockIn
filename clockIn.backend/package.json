@@ -5,7 +5,11 @@
   "author": "Mykhaylo Lelgant <mykle23.dev@gmail.com>",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/index.js"
+    "dev": "nodemon ./src/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --check **/*.js",
+    "prettier:fix": "prettier --write **/*.js"
   },
   "repository": "https://github.com/Mykle23/ClockIn.git",
   "keywords": [
